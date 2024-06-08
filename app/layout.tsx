@@ -1,9 +1,12 @@
 // app/layout.tsx
 import React from 'react';
-import Link from 'next/link';
 import './globals.css'; // グローバルなスタイルを適用するためにインポート
 
-const Layout: React.FC = ({ children }) => {
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <html lang="ja">
       <head>
